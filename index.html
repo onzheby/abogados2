@@ -292,7 +292,7 @@
                 <div class="col-lg-7">
                     <div class="card shadow-lg">
                         <div class="card-body">
-                           <form action="https://formsubmit.co/solas747@gmail.com" method="POST">
+                          <form action="https://formsubmit.co/solas747@gmail.com" method="POST">
     <center>
         <h1>¿Necesitas un Abogado que te defienda?</h1>
     </center>
@@ -307,21 +307,23 @@
         <p data-aos="flip-down">Rellena nuestro formulario si PREFIERES QUE NOS COMUNIQUEMOS CONTIGO</p>
     </center>
     <div class="form-group">
-        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre y apellido">
+        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre y apellido" required>
     </div>
     <div class="form-group">
-        <input type="email" name="email" class="form-control" placeholder="Tu mejor email">
+        <input type="email" name="email" class="form-control" placeholder="Tu mejor email" required>
     </div>
     <div class="form-group">
-        <input type="text" name="telefono" class="form-control" placeholder="Incluye el +56 por favor">
+        <input type="text" name="telefono" class="form-control" placeholder="Incluye el +56 por favor" required>
     </div>
     <input type="hidden" name="_subject" value="Nuevo contacto desde el formulario web">
     <input type="hidden" name="_cc" value="otra-direccion@gmail.com">
-    <input type="hidden" name="from_name" value="nombre">
+    <input type="hidden" name="_replyto" value="">
+    <input type="hidden" name="from_name" value="">
     <center>
         <button type="submit" name="submit" class="btn btn-warning">¡Quiero ser contactado!</button>
     </center>
 </form>
+
                             <p>Tus datos no serán compartidos con ninguna empresa o institución</p>
                         </div>
                     </div>
@@ -864,7 +866,17 @@
     <script>
         AOS.init();
     </script>
+<script>
+    // Script to dynamically set the from_name and _replyto hidden inputs
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const form = event.target;
+        const nombre = form.querySelector('input[name="nombre"]').value;
+        const email = form.querySelector('input[name="email"]').value;
 
+        form.querySelector('input[name="from_name"]').value = nombre;
+        form.querySelector('input[name="_replyto"]').value = email;
+    });
+</script>
 </body>
 
 </html>
