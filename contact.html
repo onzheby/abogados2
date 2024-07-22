@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Salinas Giadach Abogados Asociados</title>
+    <title>Salinas_Giadach Abogados Asociados</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description"
         content="Consulta a un abogado penalista de prestigio y experiencia en Chile. Defensa personalizada y respuesta inmediata.">
@@ -124,6 +124,7 @@
             /* Fondo de la tarjeta */
             border-radius: 8px;
             /* Borde redondeado */
+
         }
     }
 
@@ -137,21 +138,22 @@
         margin-top: 50px;
         /* Margen superior original de la tarjeta */
         padding: 30px;
+
         /* Relleno original de la tarjeta */
     }
 
     .container-bg {
         background-image: url('img/fondo.jpg');
-        /* Reemplaza 'img/fondo.jpg' con la ruta correcta de tu imagen */
         background-size: cover;
         background-attachment: fixed;
-        /* Añade esta línea para que la imagen se mueva al hacer scroll */
+        background-repeat: no-repeat;
+        background-position: center;
 
         padding: 50px 0;
-        bottom: 150px 0;
         color: #534a4a;
-        /* Color del texto sobre la imagen de fondo */
+        overflow: hidden;
     }
+
 
     .container-bg h1,
     .container-bg h2,
@@ -173,6 +175,7 @@
     @media (min-width: 1200px) {
         .navbar-brand h1 {
             font-size: 0.3rem;
+
             /* Ajuste específico para pantallas grandes */
         }
     }
@@ -194,6 +197,7 @@
             font-size: 1.3rem;
             /* Font size for small screens */
         }
+
     }
 
 
@@ -214,6 +218,23 @@
         background-color: #20b358;
         color: #fff;
     }
+
+    @media (max-width: 991px) {
+        .navbar-brand.d-block.d-lg-none {
+            display: block;
+            margin-left: 37px;
+            /* Ajusta el margen izquierdo en pantallas más pequeñas */
+            font-size: 3rem;
+            /* Ajusta el tamaño de la fuente para dispositivos pequeños */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-brand.d-block.d-lg-none {
+            display: none;
+            /* Oculta el elemento en pantallas grandes */
+        }
+    }
 </style>
 </head>
 
@@ -223,8 +244,8 @@
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.html"
                     class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 style="font-size: 30px;" class="m-0 display-5 text-primary text-uppercase text-center">Salinas
-                        Giadach<br>
+                    <h1 style="font-size: 26px;" class="m-0 display-5 text-primary text-uppercase text-center">
+                        Salinas_Giadach<br>
                         Abogados
                         Asociados
                     </h1>
@@ -264,8 +285,8 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h2 style="font-size: 25px;" class="m-4 display-5 text-primary text-uppercase text-center">
-                            Salinas Giadach<br>
+                        <h2 style="font-size: 22px;" class="m-1 display-5 text-primary text-uppercase text-center">
+                            Salinas_Giadach<br>
                             Abogados
                             Asociados
                         </h2>
@@ -322,8 +343,8 @@
                         <div id="success"></div>
 
 
-                        <form id="form">
-
+                        <form action="https://formsubmit.co/solas747@gmail.com" method="POST">
+                            <input type="hidden" name="_next" value="https://onzheby.github.io/abogados2/">
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
                                     <input type="text" class="form-control p-4" name="name" placeholder="Nombre"
@@ -343,7 +364,7 @@
                             </div>
                             <div class="control-group">
                                 <input type="text" class="form-control p-4" name="phone" placeholder="telefono"
-                                    required="required" data-validation-required-message="Por favor Ingrese Asunto" />
+                                    required="required" data-validation-required-message="Por favor Ingrese telefono" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
@@ -355,18 +376,15 @@
                             <div>
                                 <button class="btn btn-primary btn-block" type="submit" id="button">Enviar</button>
                             </div>
-
+                            <input type="hidden" name="_subject" value="Nuevo contacto desde el formulario web">
+                            <input type="hidden" name="_cc" value="otra-direccion@gmail.com">
+                            <input type="hidden" name="_replyto" value="">
+                            <input type="hidden" name="from_name" value="">
 
                         </form>
 
 
 
-                        <script type="text/javascript"
-                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-                        <script type="text/javascript">
-                            emailjs.init('8zGsKnyFcbwcbsfOZ')
-                        </script>
                     </div>
                 </div>
                 <div class="col-lg-6" style="min-height: 400px;">
@@ -440,7 +458,7 @@
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
 
-                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Incio</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
                     <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Quienes
                         Somos</a>
                     <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
@@ -504,27 +522,15 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
         <script>
-            const btn = document.getElementById('button');
+            // Script to dynamically set the from_name and _replyto hidden inputs
+            document.querySelector('form').addEventListener('submit', function (event) {
+                const form = event.target;
+                const nombre = form.querySelector('input[name="nombre"]').value;
+                const email = form.querySelector('input[name="email"]').value;
 
-            document.getElementById('form')
-                .addEventListener('submit', function (event) {
-                    event.preventDefault();
-
-                    btn.value = 'Sending...';
-
-                    const serviceID = 'service_fdz894b';
-                    const templateID = 'template_6fqe3nv';
-
-                    emailjs.sendForm(serviceID, templateID, this)
-                        .then(() => {
-                            btn.value = 'Send Email';
-                            alert('Sent!');
-                        }, (err) => {
-                            btn.value = 'Send Email';
-                            alert(JSON.stringify(err));
-                        });
-                });
-
+                form.querySelector('input[name="from_name"]').value = nombre;
+                form.querySelector('input[name="_replyto"]').value = email;
+            });
         </script>
 </body>
 
