@@ -3,29 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ABOGADOS URIBE & GIADACH ASOCIADOS</title>
+    <title>Salinas Giadach Abogados Asociados</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
+    <meta name="description"
+        content="Consulta a un abogado penalista de prestigio y experiencia en Chile. Defensa personalizada y respuesta inmediata.">
+    <meta name="keywords"
+        content="abogado penalista, defensa legal, abogado de prestigio, consulta legal, defensa personalizada, abogados en Chile, Robos y Hurto, porte de armas,respuesta inmediata">
+    <meta name="robots" content="index, follow">
     <!-- Favicon -->
     <link href="img/logo.ico" rel="icon">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap"
         rel="stylesheet">
-
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 <style>
     .containerr {
@@ -142,8 +142,10 @@
 
     .container-bg {
         background-image: url('img/fondo.jpg');
-        /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta correcta de tu imagen */
+        /* Reemplaza 'img/fondo.jpg' con la ruta correcta de tu imagen */
         background-size: cover;
+        background-attachment: fixed;
+        /* Añade esta línea para que la imagen se mueva al hacer scroll */
 
         padding: 50px 0;
         bottom: 150px 0;
@@ -153,22 +155,34 @@
 
     .container-bg h1,
     .container-bg h2,
+    .container-bg h4,
     .container-bg p {
-        color: #3f3535;
+
+        color: #534a4a;
         /* Asegura que el texto sea legible sobre la imagen */
     }
 
 
-    @media (max-width: 1200px) {
+    @media (max-width: 576px) {
         .navbar-brand h1 {
-            font-size: 1.75rem;
-            /* Font size for large screens */
+            font-size: 1.3rem;
+            /* Ajuste específico para pantallas pequeñas */
         }
     }
 
+    @media (min-width: 1200px) {
+        .navbar-brand h1 {
+            font-size: 0.3rem;
+            /* Ajuste específico para pantallas grandes */
+        }
+    }
+
+
+
+
     @media (max-width: 992px) {
         .navbar-brand h1 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             /* Font size for medium screens */
         }
     }
@@ -177,31 +191,19 @@
 
     @media (max-width: 768px) {
         .navbar-brand h1 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             /* Font size for small screens */
         }
     }
 
-    @media (max-width: 576px) {
-        .navbar-brand h1 {
-            font-size: 1.30rem;
-            /* Font size for extra small screens */
-        }
-
-        .navbar-brand h1 {
-            font-size: 1.30rem;
-            /* Font size for extra small screens */
-        }
-    }
 
     .navbar-brand h1 {
-        font-size: 1.67rem;
-        /* Default font size */
+        font-size: clamp(1rem, 1.3vw, 1.4rem);
+        /* Tamaño de fuente responsivo */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
 
     .btn-whatsapp {
         background-color: #25d366;
@@ -213,6 +215,7 @@
         color: #fff;
     }
 </style>
+</head>
 
 <body>
     <!-- Header Start -->
@@ -221,7 +224,11 @@
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
                 <a href="index.html"
                     class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <h1 class="m-0 display-5 text-primary text-uppercase">ABOGADOS URIBE & <br>GIADACH ASOCIADOS</h1>
+                    <h1 style="font-size: 30px;" class="m-0 display-5 text-primary text-uppercase text-center">Salinas
+                        Giadach<br>
+                        Abogados
+                        Asociados
+                    </h1>
                 </a>
             </div>
             <div class="col-lg-9">
@@ -258,19 +265,27 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                     <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <h1 class="m-0 display-5 text-primary text-uppercase">ABOGADOS URIBE & <br> GIADACH ASOCIADOS
-                        </h1>
+                        <h2 style="font-size: 25px;" class="m-4 display-5 text-primary text-uppercase text-center">
+                            Salinas Giadach<br>
+                            Abogados
+                            Asociados
+                        </h2>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="mx-auto">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse"
+                            data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-between text-center" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>
                             <a href="about.html" class="nav-item nav-link">Quienes Somos</a>
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
+
                         </div>
-                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Contáctanos</a>
+                        <a href="contact.html" class="btn btn-primary mr-3 d-none d-lg-block">Contáctanos</a>
                     </div>
                 </nav>
             </div>
@@ -283,7 +298,7 @@
     <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Nosotros</h3>
+                <h2 class="display-3 text-white text-uppercase">Nosotros</h2>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Inicio</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -296,30 +311,33 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-6">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="position-relative text-center bg-white text-primary rounded p-3 mt-4 mb-4">Quienes Somos
+                    <h2 class="position-relative text-center bg-white text-primary rounded p-3 mt-3 mb-4">Quienes Somos
                     </h2>
-                    <p class="text-center">En Abogados uribe & Giadach Asociados, nos enorgullecemos de ofrecer
+                    <p class="text-center">En Salinas Giadach Abogados Asociados, nos enorgullecemos de ofrecer
                         servicios legales
                         confiables y efectivos con más de 25 años de experiencia en el campo. Nuestra misión es
                         proporcionar asesoramiento legal de alta calidad, personalizado a las necesidades específicas de
                         cada cliente.</p>
 
-                    <h4 class="text-primary mt-4">Nuestra Filosofía</h4>
-                    <p>En Abogados uribe & Giadach Asociados, creemos que la confianza y la comunicación son la base de
+                    <h2 class="text-primary mt-3">Nuestra Filosofía</h2>
+                    <br>
+                    <p>En Salinas Giadach Abogados Asociados, creemos que la confianza y la comunicación son la base de
                         una relación
                         exitosa con nuestros clientes. Nos comprometemos a mantenerte informado y apoyado en cada paso
                         de tu proceso legal.</p>
 
-                    <h4 class="text-primary mt-4">Nuestro Equipo</h4>
+                    <h2 class="text-primary mt-3">Nuestro Equipo</h2>
+                    <br>
                     <p>Contamos con un equipo de profesionales dedicados y experimentados, especializados en diversas
                         áreas del derecho. Nuestro objetivo es garantizar que recibas una atención detallada y
                         personalizada, enfocada en lograr los mejores resultados para tu caso.</p>
 
-                    <h4 class="text-primary mt-4">Nuestros Valores</h4>
+                    <h2 class="text-primary mt-3">Nuestros Valores</h2>
+                    <br>
                     <ul>
                         <li><strong>Confianza:</strong> Establecemos relaciones basadas en la confianza y la
                             transparencia.</li>
@@ -337,7 +355,7 @@
                             siempre cerca de ti.</li>
                     </ul>
 
-                    <p>En Abogados uribe & Giadach Asociados, estamos comprometidos a brindarte una representación legal
+                    <p>En Salinas Giadach Abogados Asociados, estamos comprometidos a brindarte una representación legal
                         efectiva y
                         confiable. Contáctanos hoy mismo para aprender más sobre cómo podemos ayudarte.</p>
                 </div>
@@ -365,7 +383,7 @@
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="feature-text bg-white rounded p-lg-5">
                         <h6 class="text-uppercase">Nuestras características</h6>
-                        <h1 class="mb-4">Por qué elegirnos</h1>
+                        <h2 class="mb-4">Por qué elegirnos</h2>
                         <div class="d-flex mb-4">
                             <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
                                 <h5 class="text-secondary m-0">1</h5>
@@ -470,7 +488,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Nuestra Oficina</h5>
+                        <h2 style="font-size: 19px; color: #534a4a;" class="text-white">Nuestra Oficina</h2>
                         <p class="m-0">Av. Rondizzoni 1680 of. F</p>
                     </div>
                 </div>
@@ -479,7 +497,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-envelope-open text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Email</h5>
+                        <h2 style="font-size: 19px; color: #534a4a;" class="text-white">Email</h2>
                         <p class="m-0">asociadoscriminis@gmail.com</p>
                     </div>
                 </div>
@@ -497,10 +515,13 @@
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 display-5 text-primary text-uppercase">ABOGADOS URIBE & <br> GIADACH ASOCIADOS
-                    </h1>
+                    <h2 style="font-size: 17px;" class="m-0 mt-n2 display-5 text-primary text-uppercase text-left">
+                        Salinas Giadach
+                        Abogados
+                        Asociados
+                    </h2>
                 </a>
-                <p>¿Necesitas un abogado penalista? ABOGADOS URIBE & GIADACH ASOCIADOS te ofrecemos defensa legal
+                <p>¿Necesitas un abogado penalista? En Salinas Giadach Abogados Asociados te ofrecemos defensa legal
                     experta en
                     delitos de todo tipo. Haz tu consulta</p>
                 <div class="d-flex justify-content-start mt-4">
@@ -517,7 +538,7 @@
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
 
-                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Incio</a>
                     <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Quienes
                         Somos</a>
                     <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
@@ -549,40 +570,37 @@
 
         </div>
         <div class="row p-1 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
-            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="text-white">
-                    <a style="padding-right: px;" class="font-weight-bold" href="#">
-                        abogadosuribe&giadachasociados.cl
-                    </a>
+            <div class="col-md-11 text-center text-md-left mb-3 mb-md-0">
+                <p class="text-white text-center">
+
                     © 2024 Todos los derechos reservados
                 </p>
             </div>
 
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>
