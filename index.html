@@ -11,6 +11,9 @@
         content="abogado penalista, defensa legal, abogado de prestigio, consulta legal, defensa personalizada, abogados en Chile, Robos y Hurto, porte de armas,respuesta inmediata">
     <meta name="robots" content="index, follow">
     <!-- Favicon -->
+    <!-- para estrellas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link href="img/logo.ico" rel="icon">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Web Fonts -->
@@ -28,16 +31,55 @@
 
 </head>
 <style>
-    .containerr {
-        background-image: url('img/carousel-1.jpg');
-        /* Ruta de la imagen de fondo */
-        background-size: cover;
-        /* Ajusta el tamaño de la imagen al contenedor */
-        background-position: center;
-        /* Centra la imagen */
-        padding: 50px 0;
-        /* Ajusta el relleno superior e inferior según necesites */
+    .position-sticky {
+        position: sticky;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        background-color: rgb(49, 49, 47);
+        padding: 20px;
+        /* Ajuste para pantallas más pequeñas */
+        font-size: 16px;
+        /* Ajuste para pantallas más pequeñas */
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: bottom 0.7s;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        /* Añadir sombra para mejorar la visibilidad */
     }
+
+    @media (max-width: 992px) {
+        .sticky {
+
+            flex-direction: column;
+            padding: 10px;
+            /* Ajuste adicional para pantallas más pequeñas */
+        }
+
+        .sticky span,
+        .sticky .btn {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+    /* Ajustes para dispositivos móviles */
+    @media (max-width: 480px) {
+        .sticky {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .sticky .btn {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+
+
 
     .left-section img {
         max-width: 100%;
@@ -235,10 +277,20 @@
             /* Oculta el elemento en pantallas grandes */
         }
     }
+
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: static;
+        /* Mantenerlo estático para no superponerse */
+    }
 </style>
 </head>
 
 <body>
+
     <!-- Header Start -->
 
     <div class="container-fluid">
@@ -322,7 +374,7 @@
 
     <!-- Card Start -->
     <div class="container-fluid container-bg">
-        <div data-aos="fade-up" data-aos-delay="" class="container mt-4">
+        <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="" class="container mt-4">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="card shadow-lg">
@@ -389,13 +441,15 @@
 
 
                     <h2 style="color: white"> Un abogado penalista con vasta experiencia y renombre te brinda una
-                        consulta individual para examinar tu caso a fondo y proporcionarte la estrategia de defensa más
+                        consulta individual para examinar tu caso a fondo y proporcionarte la estrategia de defensa
+                        más
                         efectiva.
                     </h2>
                     <br>
 
                     <h2 style="color: white; font-size: 20px;">Desarrollamos un plan personalizado para proteger tus
-                        derechos desde el principio. Cuando enfrentas acusaciones, cada momento es valioso. ¡No pierdas
+                        derechos desde el principio. Cuando enfrentas acusaciones, cada momento es valioso. ¡No
+                        pierdas
                         tiempo, contáctanos ya!</h2>
 
 
@@ -406,9 +460,6 @@
     <!-- Carousel End -->
 
 
-    <!-- About Start -->
-
-    <!-- About End -->
 
 
     <!-- Services Start -->
@@ -514,9 +565,7 @@
     <!-- Services End -->
 
 
-    <!-- Appointment Start -->
 
-    <!-- Appointment End -->
 
 
     <!-- Features Start -->
@@ -641,7 +690,8 @@
             <div class="bg-action rounded" style="height: 500px;">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-7 text-center">
-                        <h2 style="font-size: 30px;" class="text-white mb-4">Empecemos. Llámanos ahora para una consulta
+                        <h2 style="font-size: 30px;" class="text-white mb-4">Empecemos. Llámanos ahora para una
+                            consulta
                             gratis</h2>
                         <a class="btn btn-primary py-3 px-5 mt-2" href="tel:+56926485091">Llámanos ahora!</a>
                     </div>
@@ -652,88 +702,233 @@
     <!-- Action End -->
 
 
-    <!-- Team Start -->
 
-    <!-- Team End -->
 
 
     <!-- Testimonial Start -->
     <div data-aos="fade-up" class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center pb-5">
-                <h2 style="font-size: 19px;" class="text-uppercase">Testimonial
-                </h2>
-                <h2 style="font-size: 37px;" class="mb-5"> Lo que dicen nuestros clientes.</h2>
+                <h2 style="font-size: 19px;" class="text-uppercase">Testimonial</h2>
+                <h2 style="font-size: 37px;" class="mb-5">Lo que dicen nuestros clientes.</h2>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        "El abogado del estudio jurídico Salinas_Giadach Abogados Asociados fue un pilar en mi defensa.
-                        Con su ayuda, el
-                        tribunal finalmente vio la realidad de las falsas acusaciones."
+                        "El abogado del estudio jurídico Salinas_Giadach Abogados Asociados fue un pilar en mi
+                        defensa. Con su ayuda, el tribunal finalmente vio la realidad de las falsas acusaciones."
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
                             alt="">
-                        <div class=" pl-4">
+                        <div class="pl-4">
                             <h2 style="font-size: 19px; color: #534a4a;">Eduardo Villalobos</h2>
-
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        "Era culpable y lo sabía. Aun así, el estudio Salinas_Giadach Abogados Asociados me trató con
-                        dignidad y respeto,
-                        asegurando que se me aplicara la ley de manera justa sin prejuicios."
-
+                        "Era culpable y lo sabía. Aun así, el estudio Salinas_Giadach Abogados Asociados me trató
+                        con dignidad y respeto, asegurando que se me aplicara la ley de manera justa sin prejuicios."
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
                             alt="">
                         <div class="pl-4">
                             <h2 style="font-size: 19px; color: #534a4a;">Jaime Navarro</h2>
-
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-
-                        "El compromiso y la transparencia del estudio Salinas_Giadach Abogados Asociados fueron clave
-                        durante mi proceso.
-                        Estoy profundamente agradecido por su incansable defensa."
+                        "El compromiso y la transparencia del estudio Salinas_Giadach Abogados Asociados fueron
+                        clave durante mi proceso. Estoy profundamente agradecido por su incansable defensa."
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
                             alt="">
                         <div class="pl-4">
                             <h2 style="font-size: 19px; color: #534a4a;">Andrés Morales</h2>
-
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        "Aunque enfrenté acusaciones muy serias, el estudio Salinas_Giadach Abogados Asociados estuvo a
-                        mi lado en cada
-                        paso
-                        del proceso. Su profesionalismo y dedicación fueron fundamentales para enfrentar esta
-                        difícil
-                        situación."
+                        "Aunque enfrenté acusaciones muy serias, el estudio Salinas_Giadach Abogados Asociados
+                        estuvo a mi lado en cada paso del proceso. Su profesionalismo y dedicación fueron fundamentales
+                        para enfrentar esta difícil situación."
                     </div>
                     <div class="d-flex align-items-center pt-3">
                         <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
                             alt="">
                         <div class="pl-4">
                             <h2 style="font-size: 19px; color: #534a4a;">Héctor Soto</h2>
-
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "Salinas_Giadach Abogados Asociados me brindó un apoyo increíble y me hizo sentir seguro en cada
+                        etapa del proceso legal."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">Valentina López</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "Gracias a Salinas_Giadach Abogados Asociados, me sentí comprendido y apoyado durante todo mi
+                        caso. No podría haberlo hecho sin ellos."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">Javier González</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "El equipo de Salinas_Giadach Abogados Asociados fue como un amigo confiable a mi lado,
+                        guiándome en cada paso del proceso legal."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">Camila Torres</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "La humanidad y profesionalismo de Salinas_Giadach Abogados Asociados hicieron toda la
+                        diferencia en mi situación. Estoy muy agradecido."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">Andrés Fernández</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "Salinas_Giadach Abogados Asociados me dio esperanza y claridad en un momento complicado.
+                        Realmente se preocuparon por mí y mi caso."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">María Rojas</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                        "Nunca olvidaré el apoyo de Salinas_Giadach Abogados Asociados. Su dedicación y empatía me
+                        ayudaron a superar esta difícil etapa."
+                    </div>
+                    <div class="d-flex align-items-center pt-3">
+                        <img class="img-fluid rounded-circle" src="img/pngwing.jpg" style="width: 60px; height: 60px;"
+                            alt="">
+                        <div class="pl-4">
+                            <h2 style="font-size: 19px; color: #534a4a;">Diego Martínez</h2>
+                            <!-- Estrellas de calificación -->
+                            <div class="stars">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <!-- Testimonial End -->
 
 
@@ -770,7 +965,8 @@
                 <div class="elementor-element elementor-element-465c8bb elementor-widget elementor-widget-heading"
                     data-id="465c8bb" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container">
-                        <h2 style="font-size: 25px;" class="elementor-heading-title elementor-size-default">¿Necesitas
+                        <h2 style="font-size: 25px;" class="elementor-heading-title elementor-size-default">
+                            ¿Necesitas
                             asesoría o
                             representación
                             legal pero te preocupa el costo? ¡Te ofrecemos la solución! Paga tus servicios jurídicos
@@ -780,7 +976,8 @@
                 <div class="elementor-element elementor-element-6fe0bd0 elementor-widget elementor-widget-heading"
                     data-id="6fe0bd0" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container">
-                        <h4 style="font-size: 24px;" class="elementor-heading-title elementor-size-default">Olvídate de
+                        <h4 style="font-size: 24px;" class="elementor-heading-title elementor-size-default">Olvídate
+                            de
                             las barreras
                             económicas
                             que te impiden defender tus derechos. Puedes cubrir los honorarios de nuestros abogados
@@ -791,12 +988,24 @@
             </div>
         </div>
     </div>
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <div data-aos="fade-up" data-aos-duration="5000" class="position-sticky text-center" style="color: #fff;">¿Estás
+        acusado por un delito y
+        necesitas que te
+        defiendan?
+        <a style="margin-left: 10px;" href="contact.html" class="btn btn-info d-block d-lg-block">Haz tu Consulta</a>
+
+
+
+    </div>
 
 
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+
+    </div>
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5">
         <div class="row mt-5">
             <div class="col-lg-4">
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
@@ -829,7 +1038,7 @@
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h2 style="font-size: 17px;" class="m-0 mt-n2 display-5 text-primary text-uppercase text-left">
+                    <h2 style="font-size: 15px;" class="m-0 mt-n2 display-5 text-primary text-uppercase text-left">
                         Salinas_Giadach
                         Abogados
                         Asociados
@@ -892,45 +1101,46 @@
             </div>
 
         </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- Back to Top -->
 
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/tempusdominus/js/moment.min.js"></script>
-        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+    <!-- Contact Javascript File -->
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script>
-            // Script to dynamically set the from_name and _replyto hidden inputs
-            document.querySelector('form').addEventListener('submit', function (event) {
-                const form = event.target;
-                const nombre = form.querySelector('input[name="nombre"]').value;
-                const email = form.querySelector('input[name="email"]').value;
 
-                form.querySelector('input[name="from_name"]').value = nombre;
-                form.querySelector('input[name="_replyto"]').value = email;
-            });
-        </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Script to dynamically set the from_name and _replyto hidden inputs
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const form = event.target;
+            const nombre = form.querySelector('input[name="nombre"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+
+            form.querySelector('input[name="from_name"]').value = nombre;
+            form.querySelector('input[name="_replyto"]').value = email;
+        });
+    </script>
+
 
 </body>
 
