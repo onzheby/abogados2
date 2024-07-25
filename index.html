@@ -34,6 +34,7 @@
     .position-sticky {
         position: sticky;
         bottom: 0;
+        top: 0;
         width: 100%;
         background-color: rgb(49, 49, 47);
         padding: 20px;
@@ -132,6 +133,42 @@
         padding: 0 10px;
     }
 
+    @media (max-width: 768px) {
+        .e-con-inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .elementor-widget-heading {
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        .elementor-widget-image {
+            justify-content: center;
+        }
+
+        .e-child {
+            width: 100%;
+        }
+
+        .carousel-item {
+            min-height: 400px;
+            /* Reducir la altura del carrusel para dispositivos móviles */
+        }
+
+        .card-body {
+            margin-top: 20px;
+            /* Ajustar el margen superior de la tarjeta */
+            padding: 20px;
+            /* Ajustar el relleno de la tarjeta */
+            background: rgba(255, 255, 255, 0.8);
+            /* Fondo de la tarjeta */
+            border-radius: 8px;
+            /* Borde redondeado */
+
+        }
+    }
 
     .carousel-item {
         min-height: 1300px;
@@ -139,7 +176,13 @@
         background-size: cover;
     }
 
+    .card-body {
+        margin-top: 50px;
+        /* Margen superior original de la tarjeta */
+        padding: 30px;
 
+        /* Relleno original de la tarjeta */
+    }
 
     .container-bg {
         background-image: url('img/fondo2.jpg');
@@ -148,16 +191,56 @@
         background-repeat: no-repeat;
         background-position: center;
 
-        padding: 80px 0;
+        padding: 50px 0;
         color: #534a4a;
         overflow: hidden;
     }
 
 
 
+    @media (max-width: 576px) {
+        .navbar-brand h1 {
+            font-size: 1.3rem;
+            /* Ajuste específico para pantallas pequeñas */
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .navbar-brand h1 {
+            font-size: 0.3rem;
+
+            /* Ajuste específico para pantallas grandes */
+        }
+    }
 
 
 
+
+    @media (max-width: 992px) {
+        .navbar-brand h1 {
+            font-size: 1.3rem;
+            /* Font size for medium screens */
+        }
+    }
+
+
+
+    @media (max-width: 768px) {
+        .navbar-brand h1 {
+            font-size: 1.3rem;
+            /* Font size for small screens */
+        }
+
+    }
+
+
+    .navbar-brand h1 {
+        font-size: clamp(1rem, 1.3vw, 1.4rem);
+        /* Tamaño de fuente responsivo */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
     .btn-whatsapp {
         background-color: #25d366;
@@ -169,7 +252,22 @@
         color: #fff;
     }
 
+    @media (max-width: 991px) {
+        .navbar-brand.d-block.d-lg-none {
+            display: block;
+            margin-left: 37px;
+            /* Ajusta el margen izquierdo en pantallas más pequeñas */
+            font-size: 3rem;
+            /* Ajusta el tamaño de la fuente para dispositivos pequeños */
+        }
+    }
 
+    @media (min-width: 992px) {
+        .navbar-brand.d-block.d-lg-none {
+            display: none;
+            /* Oculta el elemento en pantallas grandes */
+        }
+    }
 
     footer {
         background-color: #222;
@@ -318,7 +416,7 @@
 
                 <div
                     class="col-lg-5 col-md-6 text-white text-center d-flex flex-column align-items-center justify-content-center">
-                    <h2 style="font-size: 80px;">El Mejor Buffet De Abogados</h2>
+                    <h2 style="font-size: 70px;">El Mejor Buffet De Abogados</h2>
                     <p>
                     <h3>¿Te han imputado un delito recientemente? El reloj no se detiene, es crucial actuar con rapidez
                         para garantizar tu defensa.</h3>
