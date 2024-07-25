@@ -33,14 +33,14 @@
 <style>
     .position-sticky {
         position: sticky;
-        bottom:0;
+        bottom: 0;
         width: 100%;
         background-color: rgb(49, 49, 47);
         padding: 20px;
         /* Ajuste para pantallas más pequeñas */
         font-size: 16px;
         /* Ajuste para pantallas más pequeñas */
-        z-index:1000;
+        z-index: 1000;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,42 +132,6 @@
         padding: 0 10px;
     }
 
-    @media (max-width: 768px) {
-        .e-con-inner {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .elementor-widget-heading {
-            font-size: 1.2em;
-            text-align: left;
-        }
-
-        .elementor-widget-image {
-            justify-content: center;
-        }
-
-        .e-child {
-            width: 100%;
-        }
-
-        .carousel-item {
-            min-height: 400px;
-            /* Reducir la altura del carrusel para dispositivos móviles */
-        }
-
-        .card-body {
-            margin-top: 20px;
-            /* Ajustar el margen superior de la tarjeta */
-            padding: 20px;
-            /* Ajustar el relleno de la tarjeta */
-            background: rgba(255, 255, 255, 0.8);
-            /* Fondo de la tarjeta */
-            border-radius: 8px;
-            /* Borde redondeado */
-
-        }
-    }
 
     .carousel-item {
         min-height: 1300px;
@@ -175,13 +139,7 @@
         background-size: cover;
     }
 
-    .card-body {
-        margin-top: 50px;
-        /* Margen superior original de la tarjeta */
-        padding: 30px;
 
-        /* Relleno original de la tarjeta */
-    }
 
     .container-bg {
         background-image: url('img/fondo2.jpg');
@@ -190,65 +148,16 @@
         background-repeat: no-repeat;
         background-position: center;
 
-        padding: 50px 0;
+        padding: 80px 0;
         color: #534a4a;
         overflow: hidden;
     }
 
 
-    .container-bg h1,
-    .container-bg h2,
-    .container-bg h4,
-    .container-bg p {
-
-        color: #534a4a;
-        /* Asegura que el texto sea legible sobre la imagen */
-    }
-
-
-    @media (max-width: 576px) {
-        .navbar-brand h1 {
-            font-size: 1.3rem;
-            /* Ajuste específico para pantallas pequeñas */
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .navbar-brand h1 {
-            font-size: 0.3rem;
-
-            /* Ajuste específico para pantallas grandes */
-        }
-    }
 
 
 
 
-    @media (max-width: 992px) {
-        .navbar-brand h1 {
-            font-size: 1.3rem;
-            /* Font size for medium screens */
-        }
-    }
-
-
-
-    @media (max-width: 768px) {
-        .navbar-brand h1 {
-            font-size: 1.3rem;
-            /* Font size for small screens */
-        }
-
-    }
-
-
-    .navbar-brand h1 {
-        font-size: clamp(1rem, 1.3vw, 1.4rem);
-        /* Tamaño de fuente responsivo */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     .btn-whatsapp {
         background-color: #25d366;
@@ -260,22 +169,7 @@
         color: #fff;
     }
 
-    @media (max-width: 991px) {
-        .navbar-brand.d-block.d-lg-none {
-            display: block;
-            margin-left: 37px;
-            /* Ajusta el margen izquierdo en pantallas más pequeñas */
-            font-size: 3rem;
-            /* Ajusta el tamaño de la fuente para dispositivos pequeños */
-        }
-    }
 
-    @media (min-width: 992px) {
-        .navbar-brand.d-block.d-lg-none {
-            display: none;
-            /* Oculta el elemento en pantallas grandes */
-        }
-    }
 
     footer {
         background-color: #222;
@@ -294,29 +188,28 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+            <div class="col-lg-3 bg-secondary d-none d-lg-flex align-items-center justify-content-center">
                 <a href="index.html"
-                    class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    class="navbar-brand w-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 style="font-size: 26px;" class="m-0 display-5 text-primary text-uppercase text-center">
                         Salinas & Giadach<br>
-                        Abogados
-                        Asociados
+                        Abogados Asociados
                     </h1>
                 </a>
             </div>
             <div class="col-lg-9">
                 <div class="row bg-white border-bottom d-none d-lg-flex">
-                    <div class="col-lg-7 text-left">
-                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                    <div class="col-lg-7 d-flex align-items-center justify-content-start">
+                        <div class="d-inline-flex align-items-center py-2 px-3">
                             <i class="fa fa-envelope text-primary mr-2"></i>
                             <small>asociadoscriminis@gmail.com</small>
                         </div>
-                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                        <div class="d-inline-flex align-items-center py-2 px-2">
                             <i class="fa fa-phone-alt text-primary mr-2"></i>
                             <small>+56926485091</small>
                         </div>
                     </div>
-                    <div class="col-lg-5 text-right">
+                    <div class="col-lg-5 d-flex align-items-center justify-content-end">
                         <div class="d-inline-flex align-items-center p-2">
                             <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
                                 <i class="fab fa-facebook-f"></i>
@@ -337,30 +230,22 @@
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none text-center mx-auto">
                         <h2 style="font-size: 22px;" class="m-2 display-5 text-primary text-uppercase text-center">
-                            <br>
                             Salinas & Giadach<br>
-                            Abogados
-                            Asociados
+                            Abogados Asociados
                         </h2>
                     </a>
-                    <div class="mx-auto">
 
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-
-                        <button type="button" class="navbar-toggler" data-toggle="collapse"
-                            data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-
-                        </button>
-                    </div>
-                    <div  class="collapse navbar-collapse justify-content-between text-center" id="navbarCollapse">
+                    <div class="collapse navbar-collapse justify-content-between text-center" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Inicio</a>
                             <a href="about.html" class="nav-item nav-link">Quiénes Somos</a>
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
-
                         </div>
                         <a href="contact.html" class="btn btn-primary mr-3 d-none d-lg-block">Contáctanos</a>
                     </div>
@@ -374,34 +259,33 @@
     <!-- Card Start -->
     <div class="container-fluid container-bg">
         <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="" class="container mt-4">
-            <div class="row">
-                <div class="col-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 mb-4">
                     <div class="card shadow-lg">
-                        <div class="card-body" style="margin-top: 1px;">
+                        <div class="card-body">
                             <form action="https://formsubmit.co/solas747@gmail.com" method="POST">
                                 <input type="hidden" name="_next" value="https://onzheby.github.io/abogados2/">
 
-                                <h2 class="text-center ">¿Necesitas un Abogado que te defienda?</h2>
+                                <h2 class="text-center">¿Necesitas un Abogado que te defienda?</h2>
 
-                                <h4 style="text-align: center; font-size: 16px; ">
-                                    <p>Consulta para 
-                                         ayudarte a enfrentar
-                                        las acusaciones,
-                                        salvaguardar tus derechos y obtener el mejor resultado posible.</p>
-                                    <p>Contáctanos ahora por WhatsApp <strong>¡RESPUESTA
-                                            INMEDIATA!</strong></p>
+                                <h4 class="text-center" style="font-size: 16px;">
+                                    <p>Consulta para ayudarte a enfrentar las acusaciones, salvaguardar tus derechos y
+                                        obtener el mejor resultado posible.</p>
+                                    <p>Contáctanos ahora por WhatsApp <strong>¡RESPUESTA INMEDIATA!</strong></p>
                                 </h4>
 
-                                <center>
+                                <div class="text-center">
                                     <a class="btn btn-success btn-whatsapp mb-3" href="https://wa.me/56926485091"
                                         target="_blank">
                                         <i class="fab fa-whatsapp"></i>
                                         Consulta tu caso por WhatsApp <br>¡No pierdas tiempo, contáctanos ahora!
                                     </a>
-                                    <h4 data-aos="flip-down" style="text-align: center; font-size: 16px; ">
-                                        Rellena nuestro formulario 
-                                    </h4>
-                                </center>
+                                </div>
+
+                                <h4 data-aos="flip-down" class="text-center" style="font-size: 16px;">
+                                    Rellena nuestro formulario
+                                </h4>
+
                                 <div class="form-group">
                                     <input type="text" name="nombre" class="form-control"
                                         placeholder="Tu nombre y apellido" required>
@@ -414,50 +298,46 @@
                                     <input type="text" name="telefono" class="form-control"
                                         placeholder="Incluye el +56 por favor" required>
                                 </div>
+
                                 <input type="hidden" name="_subject" value="Nuevo contacto desde el formulario web">
                                 <input type="hidden" name="_cc" value="otra-direccion@gmail.com">
                                 <input type="hidden" name="_replyto" value="">
                                 <input type="hidden" name="from_name" value="">
-                                <center>
+
+                                <div class="text-center">
                                     <button type="submit" name="submit" class="btn btn-warning">¡Quiero ser
                                         contactado!</button>
-                                </center>
+                                </div>
                             </form>
 
-                            <p>Tus datos no serán compartidos con ningun contacto tercero</p>
+                            <p class="text-muted mt-2 text-center">Tus datos no serán compartidos con ningún contacto
+                                tercero</p>
                         </div>
                     </div>
                 </div>
-                <div style="margin-bottom: 300px;" class="col-lg-5" >
 
-                    <br>
-                    <h2  style="color: white; font-size: 80px;">El Mejor Buffet De Abogados</h2>
+                <div
+                    class="col-lg-5 col-md-6 text-white text-center d-flex flex-column align-items-center justify-content-center">
+                    <h2 style="font-size: 80px;">El Mejor Buffet De Abogados</h2>
                     <p>
-                    <h2 style="color: white">¿Te han imputado un delito recientemente? El reloj no se detiene, es
-                        crucial actuar con rapidez para garantizar tu defensa.</p>
-                    </h2>
-
-
-                    <h3 style="color: white"> abogados penalistas con vasta experiencia y renombre, te brindaremos una
-                        consulta individual para examinar tu caso a fondo y proporcionarte la estrategia de defensa
-                        más
-                        efectiva.
-                    </h3>
-                    <br>
-
-                    
-
+                    <h3>¿Te han imputado un delito recientemente? El reloj no se detiene, es crucial actuar con rapidez
+                        para garantizar tu defensa.</h3>
+                    </p>
+                    <h3>Abogados penalistas con vasta experiencia y renombre, te brindaremos una consulta individual
+                        para examinar tu caso a fondo y proporcionarte la estrategia de defensa más efectiva.</h3>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Carousel End -->
 
 
 
 
     <!-- Services Start -->
-    <div style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" data-aos="fade-up" data-aos-delay="500" class="container-fluid py-5">
+    <div style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" data-aos="fade-up"
+        data-aos-delay="500" class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-3">
@@ -526,7 +406,7 @@
                         </div>
 
                         <!-- Delitos por Porte de Armas -->
-                        <div  class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
                                 <i class="fa fa-2x fa-shield-alt"></i>
                             </div>
@@ -629,7 +509,7 @@
                                 <p class="m-0">Te brindamos una atención completamente a tu medida, con un equipo de
                                     profesionales de primera que se enfocará en tu situación garantizando la más
                                     alta discreción.
-                                    </p>
+                                </p>
                             </div>
                         </div>
 
@@ -794,7 +674,8 @@
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
-                        "Salinas & Giadach Abogados Asociados me brindó un apoyo increíble y me hizo sentir segura en cada
+                        "Salinas & Giadach Abogados Asociados me brindó un apoyo increíble y me hizo sentir segura en
+                        cada
                         etapa del proceso legal."
                     </div>
                     <div class="d-flex align-items-center pt-3">
@@ -968,7 +849,8 @@
         acusado por un delito y
         necesitas que te
         defiendan?
-        <a style="margin-left: 10px;" href="https://wa.me/56926485091" class="btn btn-info d-block d-lg-block">¡Haz tu Consulta!</a>
+        <a style="margin-left: 10px;" href="https://wa.me/56926485091" class="btn btn-info d-block d-lg-block">¡Haz tu
+            Consulta!</a>
 
 
 
@@ -1012,7 +894,7 @@
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h2 style="font-size: 15px;" class="m-0 mt-n2 display-5 text-primary text-uppercase text-left">
+                    <h2 style="font-size: 14px;" class="m-0 mt-n2 display-5 text-primary text-uppercase text-left">
                         Salinas & Giadach
                         Abogados
                         Asociados
